@@ -17,10 +17,8 @@ function Kereses(nev){
 
 function Kiiras(result){
     container = document.getElementById("results");
-    console.log(result)
     if(result.zips.length == 0){document.getElementById("error").textContent = "Az adatbázisunkban nem olt a kereséséenk megfelelő találat!"; return;}
     result.zips.forEach(object =>{
-        console.log("halo")
         container.innerHTML += `<p>${object.name}:  ${object.zip}</p>`
     })
 }
@@ -28,6 +26,5 @@ function Kiiras(result){
 function Lekeres(){
     document.getElementById("error").textContent = "";
     nev = document.getElementById("nevInput").value;
-    console.log(nev);
     Kereses(nev);
 }
